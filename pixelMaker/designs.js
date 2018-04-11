@@ -8,16 +8,23 @@ let col = document.getElementById('inputWeight');
 document.querySelector('form#sizePicker').addEventListener('submit', function(e){
   e.preventDefault();
   console.log(row.value);
-});
-
-document.querySelector('form#sizePicker').addEventListener('submit', function(e){
-  e.preventDefault();
   console.log(col.value);
+  makeGrid(row, col);
 });
 
+// document.querySelector('form#sizePicker').addEventListener('submit', function(e){
+//   e.preventDefault();
+//   console.log(col.value);
+// });
 
-function makeGrid() {
 
-// Your code goes here!
+function makeGrid(x, y) {
+	$('tr').remove();
 
+const rows = document.querySelectorAll('tr');
+const cols = document.querySelectorAll('td');
+
+rows.forEach(function(row){
+  row.appendChild(rows);
+})
 }
